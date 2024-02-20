@@ -1,38 +1,46 @@
 import'package:flutter/material.dart';
+import 'package:practica3_5b/theme/app_theme.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       appBar: AppBar(
         title: const Text('Componentes de flutter'),
       ),
       body: ListView(
-        children: const <Widget>[
+        children: <Widget>[
           ListTile(
-            title: Text('Vamos por la 15 Real Madrid'),
-            subtitle: Text('Las Vegas - 11/01/2024'),
-            leading: Icon(Icons.casino),
-            trailing: Icon(Icons.arrow_right_alt_rounded),
+            title: Text(
+              'Entradas',
+            // style: Theme.of(context).textTheme.headlineLarge,
+            style: AppTheme.darkTheme.textTheme.headlineLarge,
+            ),
+            subtitle:  Text('Introduciendo valores', 
+            style: AppTheme.darkTheme.textTheme.bodySmall),
+            leading: const Icon(Icons.input),
+            trailing: const Icon(Icons.arrow_right_alt_rounded),
           ),
-          Divider(),
+          const Divider(),
            ListTile(
-            title: Text('Vamos por la 15 America'),
-            subtitle: Text('Las Vegas - 12/02/2024'),
-            leading: Icon(Icons.casino),
-            trailing: Icon(Icons.arrow_right_alt_rounded),
+            title: Text('Listview.builder', 
+            style: AppTheme.darkTheme.textTheme.headlineLarge,),
+            subtitle:  Text('Lista con scroll infinito', style: AppTheme.darkTheme.textTheme.bodySmall),
+            leading: const Icon(Icons.list),
+            trailing: const Icon(Icons.arrow_circle_right_rounded),
           ),
-          Divider(),
+          const Divider(),
            ListTile(
-            title: Text('Vamos por la 12 Cruz Azul'),
-            subtitle: Text('Las Vegas - 12/02/2024'),
-            leading: Icon(Icons.casino),
-            trailing: Icon(Icons.arrow_right_alt_rounded),
+            title: Text('Notificaciones',
+            style: AppTheme.darkTheme.textTheme.headlineLarge,),
+            subtitle: Text('Mostrar una notificación', style: AppTheme.darkTheme.textTheme.bodySmall),
+            leading: const Icon(Icons.notification_add),
+            trailing: const Icon(Icons.arrow_right_alt_rounded),
           ),
         ],
       ),
     );
   }
-} 
+}

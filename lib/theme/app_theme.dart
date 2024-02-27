@@ -4,11 +4,13 @@ import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme{
   // Constante de color primario
-  static const primaryColor = Color.fromARGB(255, 0, 88, 155);
+  static const primaryColor = Color.fromARGB(255, 232, 8, 4);
   // Constante de color secundario
-  static const secondaryColor = Color.fromARGB(255, 206, 240, 201);
+  static const secondaryColor = Color.fromARGB(255, 241, 243, 241);
   // Constante de color de fondo
-  static const backColor = Color.fromARGB(255, 24, 24, 24);
+  static const backColor = Color.fromARGB(255, 18, 17, 17);
+
+  static const backcolor2 = Color.fromARGB(255, 5, 6, 50);
   // Constante de tema
   static final ThemeData darkTheme = ThemeData.dark().copyWith(
     scaffoldBackgroundColor: backColor,
@@ -30,7 +32,7 @@ class AppTheme{
           primaryColor,
         ),
         foregroundColor: MaterialStateProperty.all(
-          Colors.blueAccent
+          const Color.fromARGB(255, 240, 232, 232)
         ),
         textStyle: MaterialStateProperty.all(
           GoogleFonts.pacifico(
@@ -46,10 +48,15 @@ class AppTheme{
         fontSize: 26.5,
         fontWeight: FontWeight.w500,
         fontStyle: FontStyle.italic,
-        //decoration: TextDecoration.underline,
-        //decorationColor: Colors.red,
-        //decorationStyle: TextDecorationStyle.wavy,
-        //decorationThickness: 2.0,
+        // decoration: TextDecoration.underline,
+        // decorationColor:const  Color.fromARGB(255, 47, 5, 216),
+        // decorationStyle: TextDecorationStyle.wavy,
+        // decorationThickness: 1.0,
+      ),
+      headlineMedium: GoogleFonts.montserrat(
+        color: secondaryColor,
+        fontSize: 21.5,
+        fontWeight: FontWeight.bold,
       ),
       // Estilo para texto muy pequeño
       bodySmall: GoogleFonts.anekOdia(
